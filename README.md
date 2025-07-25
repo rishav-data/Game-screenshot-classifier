@@ -1,3 +1,5 @@
+LIVE DEPLOYMENT AT https://game-screenshot-classifier.onrender.com/
+
 # 🎮 Game Screenshot Classifier
 
 > Classify any gameplay screenshot into one of 50 iconic video games using a deep learning model built from scratch.
