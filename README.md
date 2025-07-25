@@ -7,7 +7,10 @@
 ## ✨ Live Demo
 
 Upload a screenshot and get the predicted game title instantly!
-(git_repo_pics/upload_page.png)
+<img width="1681" height="828" alt="upload_page" src="https://github.com/user-attachments/assets/ae50ea0a-4b75-411b-bd55-03121fa613cd" />
+
+
+<img width="395" height="366" alt="Screenshot 2025-07-25 081609" src="https://github.com/user-attachments/assets/fce74a91-afe2-4cbf-9053-6e2345fb54e8" />
 
 ---
 
