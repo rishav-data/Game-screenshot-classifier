@@ -1,0 +1,22 @@
+game_recognizer/
+├── app.py                     # Flask backend
+├── model.py                   # Trains the game classifier
+├── predict.py                 # Loads model and runs predictions
+├── /saved_model/              # SavedModel + class indices
+│   ├── assets/
+│   ├── variables/
+│   ├── class_indices.npy
+│   ├── fingerprint.pb
+│   ├── saved_model.pb
+├── /dataset/                  # Game images for training
+│   ├── assassins_creed/
+│   ├── battlefield/
+│   └── ...                    # 50 total
+├── /input/                    # Temp image uploaded by user (deleted after use)
+├── /templates/                # HTML views (Flask looks here by default)
+│   ├── upload.html            # Image upload form
+│   └── display.html           # Displays prediction result
+├── /static/  
+     └──front.mp4
+     └──back.mp4
+├──/git_repo_pictures/        #Images for repository

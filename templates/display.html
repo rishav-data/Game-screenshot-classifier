@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Prediction</title>
+  <style>
+    /* --- full-screen video background --- */
+    #bg-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -2;
+    }
+
+    /* --- dark overlay so text is readable --- */
+    #bg-video-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.55);
+      z-index: -1;
+    }
+
+    /* --- simple styling (mirrors original minimal page) --- */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    a {
+      color: #00bcd4;
+      text-decoration: none;
+      font-size: 1.1em;
+      margin-top: 30px;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- BACKGROUND VIDEO -->
+  <video id="bg-video" autoplay muted loop>
+    <source src="{{ url_for('static', filename='back.mp4') }}" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <div id="bg-video-overlay"></div>
+
+  <!-- ORIGINAL CONTENT -->
+  <h1>Prediction</h1>
+  <p><strong>Game:</strong> {{ label }}</p>
+  <p><strong>Confidence:</strong> {{ "%.2f"|format(confidence*100) }} %</p>
+  <a href="/">← Upload another</a>
+
+</body>
+</html>

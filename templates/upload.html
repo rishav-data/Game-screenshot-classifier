@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Game Recognizer</title>
+  <style>
+    #bg-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -2;
+    }
+
+    #bg-video-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.55);
+      z-index: -1;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: white;
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.75);
+      padding: 40px;
+      max-width: 800px;
+      margin: 5% auto;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5em;
+      margin-bottom: 30px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+
+    input[type="file"] {
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    button {
+      padding: 10px 25px;
+      font-size: 1em;
+      border: none;
+      border-radius: 5px;
+      background-color: #00bcd4;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #0097a7;
+    }
+
+    .info {
+      font-size: 0.95em;
+      line-height: 1.6;
+      text-align: justify;
+      margin-top: 20px;
+    }
+
+    .info strong {
+      color: #ffc107;
+    }
+
+    .info ul {
+      margin-top: 10px;
+      padding-left: 20px;
+    }
+
+    .game-list {
+      columns: 2;
+      -webkit-columns: 2;
+      -moz-columns: 2;
+      margin-top: 10px;
+    }
+
+    .game-list li {
+      margin-bottom: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- BACKGROUND VIDEO -->
+  <video id="bg-video" autoplay muted loop>
+    <source src="front.mp4" type="video/mp4">
+    <source src="{{ url_for('static', filename='front.mp4') }}" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <div id="bg-video-overlay"></div>
+
+  <!-- MAIN CONTENT -->
+  <div class="overlay">
+    <h1>Upload a Game Screenshot</h1>
+    <form action="/" method="POST" enctype="multipart/form-data">
+      <input type="file" name="image" accept=".jpg, .jpeg, .png" required>
+      <button type="submit">Predict</button>
+    </form>
+
+    <div class="info">
+      <p><strong>Model Limitations:</strong></p>
+      <ul>
+        <li>Only accepts JPG and PNG images</li>
+        <li>Trained to recognize only 50 specific game series (listed below)</li>
+        <li>Built entirely from scratch under hardware constraints</li>
+        <li>Trained on just 25,000 images</li>
+        <li>Model accuracy does not exceed 55%</li>
+        <li>Confidence rarely exceeds 6%</li>
+        <li>Cannot recognize games outside the trained series — it will still force a classification</li>
+      </ul>
+
+      <p><strong>Recognized Game Series:</strong></p>
+      <ul class="game-list">
+        <li>Assassin's Creed</li>
+        <li>Battlefield</li>
+        <li>Black Myth: Wukong</li>
+        <li>Borderlands</li>
+        <li>Call of Duty</li>
+        <li>Counter-Strike</li>
+        <li>Cyberpunk 2077</li>
+        <li>Dark Souls</li>
+        <li>Dead by Daylight</li>
+        <li>Dead Space</li>
+        <li>Detroit: Become Human</li>
+        <li>DOOM</li>
+        <li>Dota</li>
+        <li>Dying Light</li>
+        <li>Elden Ring</li>
+        <li>Fallout</li>
+        <li>FIFA</li>
+        <li>Fortnite</li>
+        <li>Forza</li>
+        <li>Genshin Impact</li>
+        <li>Ghost of Tsushima</li>
+        <li>God of War</li>
+        <li>Grand Theft Auto</li>
+        <li>Halo</li>
+        <li>Hearts of Iron</li>
+        <li>Helldivers</li>
+        <li>Kingdom Come</li>
+        <li>League of Legends</li>
+        <li>Lethal Company</li>
+        <li>Marvel Rivals</li>
+        <li>Mass Effect</li>
+        <li>Minecraft</li>
+        <li>Mortal Kombat</li>
+        <li>Outlast</li>
+        <li>Overwatch</li>
+        <li>PUBG</li>
+        <li>Rainbow 6 Siege</li>
+        <li>Red Dead Redemption</li>
+        <li>Roblox</li>
+        <li>Sekiro: Shadows Die Twice</li>
+        <li>Silent Hill</li>
+        <li>Spider-Man</li>
+        <li>Star Wars</li>
+        <li>Subnautica</li>
+        <li>The Finals</li>
+        <li>The Last of Us</li>
+        <li>The Witcher</li>
+        <li>Valorant</li>
+        <li>Warhammer 40,000: Space Marine</li>
+      </ul>
+
+      <p><strong>About the Project:</strong></p>
+      <p>This machine learning project was built by <strong>Rishav Dhara</strong> in the 3rd year of B.Tech CSE (Data Science). No mentorship, tutorials, or guidance was used — just self-taught coding, AI tools, and raw passion.</p>
+
+      <p>The dataset of 25,000 images was entirely collected manually by one student over a challenging week of downloading, screenshotting, and cleaning. No transfer learning was used; the model was built completely from scratch using ML libraries.</p>
+
+      <p>Despite its limitations, this is a passion project — one that came alive thanks to the support of fellow gamers who contributed screenshots. Thank you to everyone who helped. Your love for games made this possible.</p>
+    </div>
+  </div>
+
+</body>
+</html>
