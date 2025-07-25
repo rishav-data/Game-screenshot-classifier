@@ -43,5 +43,5 @@ def upload_file():
     # GET request: show the upload form
     return render_template("upload.html")
 
-if __name__ == '__main__':
-    app.run(debug=True)
+if __name__ == "__main__":
+    app.run(debug=False, host='0.0.0.0', port=10000)
