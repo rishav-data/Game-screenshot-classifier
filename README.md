@@ -157,9 +157,8 @@ game_recognizer/
 ├── /static/                 # Demo images, videos, icons
 │   ├── demo_result.png
 │   └── pred_valo.png, ...
-├── /git_repo_pictures/     # README visuals (graphs, UI)
+├── /git_repo_pics/     # README visuals (graphs, UI)
 ```
-<img width="830" height="432" alt="structure" src="https://github.com/user-attachments/assets/3f7ff98a-e9fb-484f-a096-1350eed36e20" />
 
 
 ---
@@ -171,4 +170,4 @@ game_recognizer/
 * ✅ Trained from scratch, no transfer learning
 * ✅ Clean local Flask app with image cleanup
 
-**Built with TensorFlow, Flask
+**Built with TensorFlow, Flask , Pillow , NumPy , SciPy
