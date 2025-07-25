@@ -147,28 +147,8 @@ game_recognizer/
 ## 🚀 Results at a Glance
 
 * ✅ **47% validation accuracy** on 50-way classification
-* ✅ **75%+ top-3 accuracy** for real-world screenshots
+* ✅ **55% training accuracy
 * ✅ Trained from scratch, no transfer learning
 * ✅ Clean local Flask app with image cleanup
 
----
-
-## 🚀 Deploy This
-
-> Want to show this off on Heroku, Render, or Replit?
-
-* Clone repo
-* `pip install -r requirements.txt`
-* Push + deploy Flask app
-* Keep `/saved_model/` in place
-* You're done!
-
----
-
-## 🚀 Star This Project If You Liked It!
-
-Your feedback helps keep the stars glowing ⭐
-
----
-
-**Built with TensorFlow, Flask, and lots of caffeine ☕**
+**Built with TensorFlow, Flask
