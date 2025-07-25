@@ -28,9 +28,15 @@ Upload a screenshot and get the predicted game title instantly!
 | 38    | 70%               | **52.4%**           | 2.01            |
 | 50    | 74%               | **47.2%**           | 2.14            |
 
+<img width="2205" height="944" alt="post_training_graph" src="https://github.com/user-attachments/assets/2df48f6b-f09a-4e09-9593-0bcfb337812a" />
+
+
 ---
 
 ## 📊 Model Architecture
+
+<img width="976" height="555" alt="cnn" src="https://github.com/user-attachments/assets/4b75eb40-83d1-4250-ad0f-6c11927cc604" /><img width="923" height="771" alt="data_augment" src="https://github.com/user-attachments/assets/521bc432-a09c-4334-8950-7190d444fde4" />
+
 
 > Built entirely from scratch using TensorFlow/Keras
 
@@ -41,6 +47,10 @@ Upload a screenshot and get the predicted game title instantly!
 * Output: 50-way Softmax
 * Total Parameters: < 2 million
 
+<img width="1016" height="276" alt="epoch_count" src="https://github.com/user-attachments/assets/1c2f9ef4-eb8e-4777-90cc-daca3775fceb" />
+<img width="1000" height="328" alt="patience" src="https://github.com/user-attachments/assets/49cc6098-ea01-4123-b462-74c05692ce3a" />
+
+
 ---
 
 ## 📆 Dataset Overview
@@ -50,7 +60,12 @@ Upload a screenshot and get the predicted game title instantly!
 * Cleaned & resized to **128x128**
 * Collected from Google Images (gameplay, HUDs, menus, cover art)
 
+<img width="1402" height="381" alt="please_stop_torturing_me" src="https://github.com/user-attachments/assets/13117b73-383d-40a9-9dd8-4d58344c0786" />
+<img width="442" height="128" alt="prediction" src="https://github.com/user-attachments/assets/83ed5104-d9ce-487d-bc7d-875923c48e2d" />
+
+
 |   |
+
 | - |
 
 ---
@@ -109,6 +124,9 @@ upload.html → Flask → input/ → predict.py → display.html
 | Augmentations  | Rotation, Shift, Flip, Zoom |
 | Dropout        | 0.5 before final Dense      |
 
+<img width="2379" height="1180" alt="epoch_accuracy_graph" src="https://github.com/user-attachments/assets/8dbdcc37-3056-43ce-805e-51146e80b059" />
+
+
 ---
 
 ## 💡 Common Confusions
@@ -120,10 +138,6 @@ upload.html → Flask → input/ → predict.py → display.html
 | COD        | Battlefield    | Explosions, soldiers, military UI |
 
 ---
-
-## 🧳 Future Work
-
-*
 
 ---
 
@@ -145,6 +159,8 @@ game_recognizer/
 │   └── pred_valo.png, ...
 ├── /git_repo_pictures/     # README visuals (graphs, UI)
 ```
+<img width="830" height="432" alt="structure" src="https://github.com/user-attachments/assets/3f7ff98a-e9fb-484f-a096-1350eed36e20" />
+
 
 ---
 
