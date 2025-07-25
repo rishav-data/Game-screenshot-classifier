@@ -7,6 +7,7 @@
 ## ✨ Live Demo
 
 Upload a screenshot and get the predicted game title instantly!
+(git_repo_pics/upload_page.png)
 
 ---
 
