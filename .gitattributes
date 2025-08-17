@@ -1,1 +1,3 @@
-*.py linguist-language=Python
+git add .gitattributes
+git commit -m "Force GitHub Linguist to detect Python as main language"
+git push
