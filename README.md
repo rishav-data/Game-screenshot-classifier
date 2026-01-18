@@ -1,12 +1,12 @@
 LIVE DEPLOYMENT AT https://game-screenshot-classifier.onrender.com/
 
-# 🎮 Game Screenshot Classifier
+# Game Screenshot Classifier
 
 > Classify any gameplay screenshot into one of 50 iconic video games using a deep learning model built from scratch.
 
 ---
 
-## ✨ Live Demo
+## Live Demo
 
 Upload a screenshot and get the predicted game title instantly!
 <img width="1681" height="828" alt="upload_page" src="https://github.com/user-attachments/assets/ae50ea0a-4b75-411b-bd55-03121fa613cd" />
@@ -16,7 +16,7 @@ Upload a screenshot and get the predicted game title instantly!
 
 ---
 
-## 📈 Final Training Results
+## Final Training Results
 
 * **Validation Accuracy**: **47.2%** (50-way classification)
 * **Top-3 Accuracy**: \~75%
@@ -35,7 +35,7 @@ Upload a screenshot and get the predicted game title instantly!
 
 ---
 
-## 📊 Model Architecture
+## Model Architecture
 
 <img width="976" height="555" alt="cnn" src="https://github.com/user-attachments/assets/4b75eb40-83d1-4250-ad0f-6c11927cc604" /><img width="923" height="771" alt="data_augment" src="https://github.com/user-attachments/assets/521bc432-a09c-4334-8950-7190d444fde4" />
 
@@ -55,7 +55,7 @@ Upload a screenshot and get the predicted game title instantly!
 
 ---
 
-## 📆 Dataset Overview
+## Dataset Overview
 
 * **50 game titles**
 * **500+ screenshots per class**
@@ -72,7 +72,7 @@ Upload a screenshot and get the predicted game title instantly!
 
 ---
 
-## 🚀 How to Run Locally
+## How to Run Locally
 
 ```bash
 # 1. Clone the repo
@@ -91,7 +91,7 @@ http://127.0.0.1:5000
 
 ---
 
-## 🚪 Flask Web App Workflow
+## Flask Web App Workflow
 
 > Upload. Predict. Display.
 
@@ -107,7 +107,7 @@ upload.html → Flask → input/ → predict.py → display.html
 
 ---
 
-## 🔮 Why No Transfer Learning?
+## Why No Transfer Learning?
 
 * **Educational goal**: Understand each layer in a CNN
 * **Small dataset**: 25k images (128×128) easily trainable on laptop
@@ -115,7 +115,7 @@ upload.html → Flask → input/ → predict.py → display.html
 
 ---
 
-## 🔢 Training Details
+## Training Details
 
 | Feature        | Value                       |
 | -------------- | --------------------------- |
@@ -131,7 +131,7 @@ upload.html → Flask → input/ → predict.py → display.html
 
 ---
 
-## 💡 Common Confusions
+## Common Confusions
 
 | Game A     | Game B         | Why?                              |
 | ---------- | -------------- | --------------------------------- |
@@ -143,7 +143,7 @@ upload.html → Flask → input/ → predict.py → display.html
 
 ---
 
-## 🌐 Project Structure
+## Project Structure
 
 ```plaintext
 game_recognizer/
@@ -165,7 +165,7 @@ game_recognizer/
 
 ---
 
-## 🚀 Results at a Glance
+## 🗣️💥 Results at a Glance
 
 * ✅ **47% validation accuracy** on 50-way classification
 * ✅ **55% training accuracy
